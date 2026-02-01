@@ -1500,45 +1500,7 @@
           padding: 20px 15px;
         }
       }
-     #backHome {
-  position: fixed;
-  bottom: 30px;
-  left: 20px;
-
-  width: 55px;
-  height: 55px;
-
-  /* GOLD on edges, GREEN inside */
-  background: linear-gradient(
-    135deg,
-    #d4af37 0%,
-    #1f3d2b 45%,
-    #1f3d2b 55%,
-    #d4af37 100%
-  );
-
-  color: #f5e6b3; /* soft gold text */
-
-  border: 1.5px solid rgba(212,175,55,0.8);
-  border-radius: 14px;
-
-  font-size: 22px;
-  font-weight: bold;
-
-  cursor: pointer;
-  display: block;
-  z-index: 999;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-  transition: all 0.3s ease;
-}
-#backHome:hover {
-  background: linear-gradient(135deg, #ffffff, #f7f3e8);
-  color: #1f3d2b;
-
-  transform: translateY(-4px) scale(1.06);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
-}
+ 
 
       .suivez-nous {
   display: flex;
@@ -2441,15 +2403,6 @@ ${message || "-"}
         }
       });
     </script>
- <button id="backHome" type="button">∧</button>
-<script>
-  document.getElementById("backHome").addEventListener("click", () => {
-    const home = document.getElementById("home");
-    if (home) {
-      home.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-</script>
 
 
 
@@ -2457,6 +2410,7 @@ ${message || "-"}
 
   </body>
 </html>
+
 
 
 
