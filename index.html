@@ -203,14 +203,12 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
       }
 
-     .call-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .call-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 
-  width: 60px;
-  height: 60px;
-
+  /* GOLD edges – GREEN center */
   background: linear-gradient(
     135deg,
     #d4af37 0%,
@@ -219,25 +217,39 @@
     #d4af37 100%
   );
 
-  color: #f7e7b3; /* soft gold icon/text */
+  color: #f7e7b3; /* soft gold text */
+
+  padding: 15px 22px;
+  border-radius: 50px;
+
+  font-weight: bold;
+  text-decoration: none;
 
   border: 1.5px solid rgba(212,175,55,0.8);
-  border-radius: 50%;
 
-  font-size: 26px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  z-index: 999;
 
-  cursor: pointer;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.call-btn:hover {
+.call-fixed:hover {
   transform: scale(1.08);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.45);
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(212,175,55,0.6); }
+  70% { box-shadow: 0 0 0 12px rgba(212,175,55,0); }
+  100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
 }
 
-      .call-fixed:hover {
-        transform: scale(1.1);
-      }
+.call-fixed {
+  animation: pulse 2.5s infinite;
+}
+
       .logo span {
         font-family: Georgia, serif;
       }
@@ -2445,6 +2457,7 @@ ${message || "-"}
 
   </body>
 </html>
+
 
 
 
