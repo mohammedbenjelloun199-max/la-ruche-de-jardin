@@ -2411,25 +2411,23 @@ ${message || "-"}
         }
       });
     </script>
-  <button id="backHome">^</button>
-
+ <button id="backHome" type="button">∧</button>
 <script>
-  const btn = document.getElementById("backHome");
-
-  window.addEventListener("scroll", () => {
-    btn.style.display = window.scrollY > 250 ? "flex" : "none";
+  document.getElementById("backHome").addEventListener("click", () => {
+    const home = document.getElementById("home");
+    if (home) {
+      home.scrollIntoView({ behavior: "smooth" });
+    }
   });
-
-  function goHome() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
 </script>
+
+
+
+
 
   </body>
 </html>
+
 
 
 
