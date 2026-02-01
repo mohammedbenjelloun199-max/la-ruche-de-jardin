@@ -1470,38 +1470,46 @@
           padding: 20px 15px;
         }
       }
-      #backHome {
-        position: fixed;
-        bottom: 30px;
-        left: 20px;
+     #backHome {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
 
-        width: 55px;
-        height: 55px;
+  width: 55px;
+  height: 55px;
 
-        background: linear-gradient(135deg, #c9a227, #e6d27a); /* GOLD */
-        color: #0f5132; /* GREEN */
+  /* GOLD on edges, GREEN inside */
+  background: linear-gradient(
+    135deg,
+    #d4af37 0%,
+    #1f3d2b 45%,
+    #1f3d2b 55%,
+    #d4af37 100%
+  );
 
-        border: 2px solid #0f5132;
-        border-radius: 12px;
+  color: #f5e6b3; /* soft gold text */
 
-        font-size: 22px;
-        font-weight: bold;
+  border: 1.5px solid rgba(212,175,55,0.8);
+  border-radius: 14px;
 
-        cursor: pointer;
-        display: black;
-        z-index: 999;
+  font-size: 22px;
+  font-weight: bold;
 
-        box-shadow: 0 8px 20px rgba(15, 81, 50, 0.25);
-        transition: all 0.3s ease;
-      }
+  cursor: pointer;
+  display: block;
+  z-index: 999;
 
-      /* Hover effect */
-      #backHome:hover {
-        background: #ffffff; /* WHITE */
-        color: #0f5132;
-        transform: translateY(-4px) scale(1.05);
-        box-shadow: 0 12px 25px rgba(15, 81, 50, 0.35);
-      }
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  transition: all 0.3s ease;
+}
+#backHome:hover {
+  background: linear-gradient(135deg, #ffffff, #f7f3e8);
+  color: #1f3d2b;
+
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+
       .suivez-nous {
   display: flex;
   flex-direction: column;
@@ -2403,9 +2411,8 @@ ${message || "-"}
         }
       });
     </script>
-    <button id="backHome" onclick="goHome()" aria-label="Back to top">
-  ↑
-</button>
+  <button id="backHome">^</button>
+
 <script>
   const btn = document.getElementById("backHome");
 
@@ -2423,5 +2430,6 @@ ${message || "-"}
 
   </body>
 </html>
+
 
 
