@@ -2071,10 +2071,11 @@
           </div>
 
 
-          <label class="terms">
-            <input type="checkbox" id="agree" />
-            أوافق على شروط الحجز وأعلم أن التأكيد يتم عبر الهاتف
-          </label>
+        <label class="agree-box">
+  <input type="checkbox" name="agree" required>
+  <span>أوافق على شروط الحجز وأعلم أن التأكيد يتم عبر الهاتف</span>
+</label>
+
 
           <button type="button" onclick="sendWhatsApp()">
             📲 Confirmer la réservation
@@ -2411,6 +2412,7 @@ ${message || "-"}
 
   </body>
 </html>
+
 
 
 
